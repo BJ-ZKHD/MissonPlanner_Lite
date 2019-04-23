@@ -156,8 +156,8 @@ public partial class MAVLink
 
             return packet;
         }
-                
 
+        MAVLinkMessage message;
         public MAVLinkMessage ReadPacketObj(Stream BaseStream)
         {
             byte[] buffer = ReadPacketByte(BaseStream);
@@ -175,8 +175,7 @@ public partial class MAVLink
             // fill in the data of the object
             MavlinkUtil.ByteArrayToStructure(buffer, ref data, 6);
 
-            MAVLinkMessage message = new MAVLinkMessage(buffer);
-
+             message = new MAVLinkMessage(buffer);
 
             return message;
         }

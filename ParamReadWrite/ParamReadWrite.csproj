@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA789061-1263-47CD-B49C-EFBC37FEC6E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ParamReadWrite</RootNamespace>
+    <AssemblyName>ParamReadWrite</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\alglibnet\alglibnet.csproj">
+      <Project>{b994d8d2-c052-4616-9d20-386640c7387f}</Project>
+      <Name>alglibnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\AltitudeAngelWings\AltitudeAngelWings.csproj">
+      <Project>{098f542c-7c70-4b9c-b2e2-ac5dc5e0294b}</Project>
+      <Name>AltitudeAngelWings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Antenna\MissionPlanner.Antenna.csproj">
+      <Project>{94836116-0cd5-4ea9-8049-447fea886406}</Project>
+      <Name>MissionPlanner.Antenna</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Arduino\Arduino.csproj">
+      <Project>{dfa3c3b7-f098-4567-a780-a37dc52ca577}</Project>
+      <Name>Arduino</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\ArduPilot\MissionPlanner.ArduPilot.csproj">
+      <Project>{ca6345d3-7a6d-478b-a0ed-a58e50dcaa83}</Project>
+      <Name>MissionPlanner.ArduPilot</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\AviFile\AviFile.csproj">
+      <Project>{abb32a29-af50-47fa-b243-5fd75a5aba54}</Project>
+      <Name>AviFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\BaseClasses\BaseClasses.csproj">
+      <Project>{2a8e8af5-74e7-49db-a42e-9360fa7a6cc4}</Project>
+      <Name>BaseClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\BouncyCastle\BouncyCastle.csproj">
+      <Project>{ba876930-f966-4dd3-8f60-966d6fe93b76}</Project>
+      <Name>BouncyCastle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\BSE.Windows.Forms\BSE.Windows.Forms.csproj">
+      <Project>{9ca367b8-0b98-49d1-84fb-735e612e3ba9}</Project>
+      <Name>BSE.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Comms\MissionPlanner.Comms.csproj">
+      <Project>{825e7a10-390c-4a2b-b3a8-491d14966912}</Project>
+      <Name>MissionPlanner.Comms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Controls\MissionPlanner.Controls.csproj">
+      <Project>{c8b88795-6d01-494d-83ad-6944bd4c5023}</Project>
+      <Name>MissionPlanner.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Core\Core.csproj">
+      <Project>{59129078-7b12-4198-b93e-0aa08d0bb7ed}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\CsAssortedWidgets\CsAssortedWidgets.csproj">
+      <Project>{3b933839-c505-48d4-a5ce-d9375c88e943}</Project>
+      <Name>CsAssortedWidgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\ExtGuided\ExtGuided.csproj">
+      <Project>{b5211b56-ca30-4b2a-843b-832849f18cea}</Project>
+      <Name>ExtGuided</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\GDAL\GDAL.NET.csproj">
+      <Project>{766fcf85-4809-44db-b316-6c4902c65245}</Project>
+      <Name>GDAL.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\GeoUtility\GeoUtility.csproj">
+      <Project>{7f7994ce-823f-4a04-bbea-d0a3808ff56d}</Project>
+      <Name>GeoUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\GMap.NET.Core\GMap.NET.Core.csproj">
+      <Project>{d0c39d9d-bed0-418b-9a5e-713176caf40c}</Project>
+      <Name>GMap.NET.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\GMap.NET.WindowsForms\GMap.NET.WindowsForms.csproj">
+      <Project>{e06def77-f933-42fb-afd7-db2d0d8d6a98}</Project>
+      <Name>GMap.NET.WindowsForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\HIL\MissionPlanner.HIL.csproj">
+      <Project>{077e19ba-4129-4aae-8fcd-34d6faf85b78}</Project>
+      <Name>MissionPlanner.HIL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.csproj">
+      <Project>{6d4f97a1-d0a0-44ec-b2a3-f5c954209444}</Project>
+      <Name>ICSharpCode.SharpZipLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Installer\Installer.csproj">
+      <Project>{ff6aa762-7ad3-4f38-94b1-ea75d7b1f217}</Project>
+      <Name>Installer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\KMLib\KMLib.csproj">
+      <Project>{29976ba4-a04d-4a80-a866-098c879c2fde}</Project>
+      <Name>KMLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\LibTessDotNet\LibTessDotNet.csproj">
+      <Project>{a7c98a7e-1bcb-4a38-aac4-2eec63a5bc5c}</Project>
+      <Name>LibTessDotNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\LibVLC.NET\LibVLC.NET.csproj">
+      <Project>{bb06dff7-4f41-4b9d-a3c3-3b6d2b8702b6}</Project>
+      <Name>LibVLC.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\ManagedNativeWifi.Simple\ManagedNativeWifi.Simple.csproj">
+      <Project>{cce510f7-1da6-40f2-8921-b86ed41bb85e}</Project>
+      <Name>ManagedNativeWifi.Simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Maps\MissionPlanner.Maps.csproj">
+      <Project>{6c4ff9c3-7aff-4274-b8fc-4a93a1faadea}</Project>
+      <Name>MissionPlanner.Maps</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Mavlink\MAVLink.csproj">
+      <Project>{13d2ec90-c41f-48a1-aada-859b6dc24edc}</Project>
+      <Name>MAVLink</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\md5sum\md5sum.csproj">
+      <Project>{624afc60-565f-4f01-bd51-bcce7aa09be9}</Project>
+      <Name>md5sum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\MetaDataExtractorCSharp240d\MetaDataExtractor.csproj">
+      <Project>{b46f6c6c-9184-41af-8f8b-e0084752ca7c}</Project>
+      <Name>MetaDataExtractor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\MissionPlanner.Gridv2\MissionPlanner.Gridv2.csproj">
+      <Project>{a7aa6037-bf11-473e-94f9-717276fe080c}</Project>
+      <Name>MissionPlanner.Gridv2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\MissionPlanner.Stats\MissionPlanner.Stats.csproj">
+      <Project>{6a6f4345-0a45-413e-b6d6-fd73660dad4c}</Project>
+      <Name>MissionPlanner.Stats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\netDxf\netDxf.csproj">
+      <Project>{785380e0-ceb9-4c34-82e5-60d0e33e848e}</Project>
+      <Name>netDxf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\OSDConfigurator\OSDConfigurator.csproj">
+      <Project>{1442b805-d6b1-4729-89f8-3a5a1c7547ad}</Project>
+      <Name>OSDConfigurator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\ProjNet\ProjNET.csproj">
+      <Project>{993db853-ec9f-45d5-ad2c-ba008b72995b}</Project>
+      <Name>ProjNET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\px4uploader\px4uploader.csproj">
+      <Project>{664fc484-2a94-4b0d-808f-a71f88e06b11}</Project>
+      <Name>px4uploader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\SharpAdbClient\SharpAdbClient.csproj">
+      <Project>{65473257-e70f-410b-9269-d0c0f771ea87}</Project>
+      <Name>SharpAdbClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\SharpKml\SharpKml.csproj">
+      <Project>{53f12a60-e9cc-44bc-8366-1ae3ab2b547d}</Project>
+      <Name>SharpKml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\SimpleGrid\MissionPlanner.SimpleGrid.csproj">
+      <Project>{28d0bef6-d69c-43ab-a22c-724f116d50ea}</Project>
+      <Name>MissionPlanner.SimpleGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\solo\solo.csproj">
+      <Project>{cf402948-a3f4-4962-8a57-e40b46759d25}</Project>
+      <Name>solo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Strings\MissionPlanner.Strings.csproj">
+      <Project>{a0de147b-144c-4a34-8d46-9394570ad7e8}</Project>
+      <Name>MissionPlanner.Strings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\SvgNet\SvgNet.csproj">
+      <Project>{bb4c8021-b5e1-4de2-82cb-14bdfb9837e4}</Project>
+      <Name>SvgNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\tlogThumbnailHandler\tlogThumbnailHandler.csproj">
+      <Project>{aba78b2e-77c3-4377-8568-9542ac227971}</Project>
+      <Name>tlogThumbnailHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\TrackerHome\TrackerHomeGPS.csproj">
+      <Project>{94c380c1-566a-4d86-855b-2e987851bf0a}</Project>
+      <Name>TrackerHomeGPS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Transitions\Transitions.csproj">
+      <Project>{b6054e5b-362c-4298-8f20-6ba5bf1a859e}</Project>
+      <Name>Transitions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Utilities\MissionPlanner.Utilities.csproj">
+      <Project>{1378a66c-38e4-46f5-a05f-dc04ef7d4d16}</Project>
+      <Name>MissionPlanner.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\WebCamService\WebCamService.csproj">
+      <Project>{78ac6375-28af-4175-9f20-b5099c92ea2b}</Project>
+      <Name>WebCamService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\ZedGraph\ZedGraph.csproj">
+      <Project>{2541686b-1673-43bf-af89-3163945db009}</Project>
+      <Name>ZedGraph</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\ExtLibs\Zeroconf\Zeroconf\Zeroconf.csproj">
+      <Project>{f4b60f03-f4c8-42cd-a46d-712838dc184b}</Project>
+      <Name>Zeroconf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\SikRadio\SikRadio.csproj">
+      <Project>{b8943726-04b0-4477-bfda-e156a0cd98a4}</Project>
+      <Name>SikRadio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\Updater\Updater.csproj">
+      <Project>{e64a1a41-a5b0-458e-8284-bb63705354da}</Project>
+      <Name>Updater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MissionPlanner\wix\wix.csproj">
+      <Project>{76374f95-c343-4acc-b86f-7ecfdd668f46}</Project>
+      <Name>wix</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

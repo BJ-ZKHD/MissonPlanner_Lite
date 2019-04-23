@@ -12,3 +12,11 @@ D:\GIT\MissionPlanner基本控制程序\MissionPlanner抽离的单联接和解�
 D:\GIT\MissionPlanner基本控制程序\MissionPlanner抽离的单联接和解锁最简程序\Mavlink\obj\Debug\MAVLink.csproj.CoreCompileInputs.cache
 D:\GIT\MissionPlanner基本控制程序\MissionPlanner抽离的单联接和解锁最简程序\Mavlink\obj\Debug\MAVLink.dll
 D:\GIT\MissionPlanner基本控制程序\MissionPlanner抽离的单联接和解锁最简程序\Mavlink\obj\Debug\MAVLink.pdb
+E:\GIT\MissonPlanner_Lite\Mavlink\bin\Debug\MAVLink.dll
+E:\GIT\MissonPlanner_Lite\Mavlink\bin\Debug\MAVLink.pdb
+E:\GIT\MissonPlanner_Lite\SimpleExample\bin\Debug\MAVLink.dll
+E:\GIT\MissonPlanner_Lite\SimpleExample\bin\Debug\MAVLink.pdb
+E:\GIT\MissonPlanner_Lite\Mavlink\obj\Debug\MAVLink.csproj.CoreCompileInputs.cache
+E:\GIT\MissonPlanner_Lite\Mavlink\obj\Debug\MAVLink.dll
+E:\GIT\MissonPlanner_Lite\Mavlink\obj\Debug\MAVLink.pdb
+E:\GIT\MissonPlanner_Lite\Mavlink\obj\Debug\MAVLink.csprojAssemblyReference.cache

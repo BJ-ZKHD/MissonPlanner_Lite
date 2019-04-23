@@ -317,7 +317,7 @@ public partial class MAVLink
 //mavlink的MASAGE ID信息
 public enum MAVLINK_MSG_ID 
 {
-        HEARTBEAT = 0,
+        HEARTBEAT = 0,  //心跳包类型
         SYS_STATUS = 1,
         SYSTEM_TIME = 2,
         PING = 4,
@@ -328,7 +328,7 @@ public enum MAVLINK_MSG_ID
         PARAM_REQUEST_READ = 20,
         PARAM_REQUEST_LIST = 21,
         PARAM_VALUE = 22,
-        PARAM_SET = 23,
+        PARAM_SET = 23,   //设置参数类型的消息
         GPS_RAW_INT = 24,
         GPS_STATUS = 25,
         SCALED_IMU = 26,
@@ -371,7 +371,7 @@ public enum MAVLINK_MSG_ID
         MISSION_ITEM_INT = 73,
         VFR_HUD = 74,
         COMMAND_INT = 75,
-        COMMAND_LONG = 76,
+        COMMAND_LONG = 76,   //锁定解锁的消息类型
         COMMAND_ACK = 77,
         MANUAL_SETPOINT = 81,
         SET_ATTITUDE_TARGET = 82,
